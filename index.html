@@ -549,6 +549,34 @@
     font-size: 11px;
   }
 
+  /* === Desktop two-column layout === */
+  @media (min-width: 860px) {
+    .container {
+      max-width: 1000px;
+      padding: 80px 32px 60px;
+    }
+    .desktop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .col-left {
+      position: sticky;
+      top: 24px;
+    }
+    .hero {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .hero-photo {
+      margin: 0 0 18px 0;
+    }
+    .lede {
+      padding: 0;
+    }
+  }
+
   /* === Mobile tweaks === */
   @media (max-width: 380px) {
     .container { padding: 72px 12px 50px; }
@@ -567,6 +595,9 @@
 </div>
 
 <div class="container">
+
+  <div class="desktop-grid">
+  <div class="col-left">
 
   <!-- HERO -->
   <section class="hero">
@@ -644,6 +675,9 @@
       <p>Z całego serca dziękuję każdemu, kto odpowiedział 🙏</p>
     </div>
   </div>
+
+  </div><!-- /col-left -->
+  <div class="col-right">
 
   <!-- MONOBANK -->
   <div class="section-heading">
@@ -891,6 +925,9 @@
       <a href="#" class="share-btn" id="share-x" target="_blank">X / Twitter</a>
     </div>
   </div>
+
+  </div><!-- /col-right -->
+  </div><!-- /desktop-grid -->
 
   <!-- FOOTER -->
   <footer class="footer">
